@@ -1,4 +1,4 @@
-# Preface
+#Preface
 
 QDK is used to build QPKG packages. A QPKG package is a self-extracting archive with application files and meta-data. A QPKG package makes it easy for anyone to install and remove packages. It also gives a package maintainer almost total control on how the package is installed on the NAS.
 
