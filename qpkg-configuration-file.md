@@ -44,7 +44,7 @@ Logical complement to the QPKG\_REQUIRE field. The QPKG\_CONFLICT specifies what
 
 ##### QPKG\_LICENSE
 
-License for the packaged application. For example, GPLv2+ , GPLv3+ , BSD , or Commercial .
+License for the packaged application. For example, GPLv2+ , GPLv3+ , BSD , or Commercial.
 
 ##### QPKG\_SUMMARY
 
