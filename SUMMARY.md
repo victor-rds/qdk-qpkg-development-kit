@@ -7,5 +7,6 @@
 * [Order of Execution](order-of-execution.md)
 * [QDK Variables](qdk-variables.md)
 * [Build Scripts](build-scripts.md)
+* [User Configuration File](user-configuration-file.md)
 * [Invoking qbuild](invoking-qbuild.md)
 
