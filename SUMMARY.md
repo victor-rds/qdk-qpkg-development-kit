@@ -21,4 +21,12 @@
 * [Help and Usage](help-and-usage.md)
 * [Creating a QPKG Package Using QDK](creating-a-qpkg-package-using-qdk.md)
 * [Creating a Simple QPKG Package](creating-a-simple-qpkg-package.md)
+* [Converting an Existing QPKG Package](converting-an-existing-qpkg-package.md)
+* [Appendix A – QPKG Format](appendix-a-–-qpkg-format.md)
+* [Header Script](header-script.md)
+* [Control Files](control-files.md)
+* [Data File](data-file.md)
+* [Extra Data Files](extra-data-files.md)
+* [QDK Area](qdk-area.md)
+* [Tail Section](tail-section.md)
 
