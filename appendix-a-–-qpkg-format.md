@@ -18,7 +18,5 @@ archive with any extra data files \(specified using QDK\_EXTRA\_FILE\). If the Q
 
 signature is added to the QDK area.
 
-
-
-                                           ![](/assets/2016-09-08_171506.png)
+![](/assets/2016-09-08_171506.png)
 
