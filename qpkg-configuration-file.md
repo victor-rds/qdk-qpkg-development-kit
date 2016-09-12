@@ -4,7 +4,7 @@ We begin with a description of the QPKG configuration file, which is required wh
 
 This is an example of a configuration file,
 
-`QPKG_NAME="QDK"QPKG_VER="2.0"`
+`QPKG_NAME="QDK"QPKG_VER="2.14"`
 
 `QPKG_AUTHOR="micke"`
 
