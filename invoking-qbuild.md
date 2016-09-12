@@ -4,17 +4,23 @@ As the previous sections have shown, we can specify most options for each QPKG p
 
 The qbuild application has the following options
 
-usage: `qbuild [--extract QPKG [DIR]] [--create-env NAME][-s|--section SECTION]`
+usage: 
 
-`[--root ROOT_DIR] [--build-arch ARCH][--build-version VERSION] [--build-model MODEL]`
+`qbuild [--extract QPKG [DIR]] [--create-env NAME] [-s|--section SECTION]`
 
-`[--build-dir BUILD_DIR] [--force-config] [--setup SCRIPT][--teardown SCRIPT] [--pre-build SCRIPT]`
+` [--root ROOT_DIR] [--build-arch ARCH] [--build-version VERSION]`
 
-`[--post-build SCRIPT][--exclude PATTERN] [--exclude-from FILE] [--gzip|--bzip2|--7zip]`
+` [--build-number NUMBER] [--build-model MODEL] [--build-dir BUILD_DIR] [--force-config]`
 
-`[--sign] [--gpg-name ID] [--verify QPKG] [--add-sign QPKG][--import-key KEY] [--remove-key ID]`
+` [--setup SCRIPT] [--teardown SCRIPT] [--pre-build SCRIPT]`
 
-`[--list-keys][--query OPTION QPKG] [-v|--verbose] [-q|--quiet] [--strict][-?|-h|--help]`
+` [--post-build SCRIPT] [--exclude PATTERN] [--exclude-from FILE]`
 
-`[--usage] [-V|--version]`
+` [--gzip|--bzip2|--7zip] [--sign] [--gpg-name ID] [--verify QPKG]`
+
+` [--add-sign QPKG] [--import-key KEY] [--remove-key ID] [--list-keys]`
+
+` [--query OPTION QPKG] [-v|--verbose] [-q|--quiet] [--strict]`
+
+` [-?|-h|--help] [--usage] [-V|--version]`
 
