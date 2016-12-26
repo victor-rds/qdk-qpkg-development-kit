@@ -20,6 +20,10 @@ The first three variables, QPKG\_NAME , QPKG\_VER , and QPKG\_AUTHOR , must alwa
 
 Name of the software being packaged. Usually, the name used for a package would be identical to thesoftware being packaged. No white-space is allowed in the name or QDK will only use the first part ofthe name \(up to the first space\). The name must be 20 characters or less.
 
+##### QPKG\_DISPLAY\_NAME
+
+
+
 ##### QPKG\_VER
 
 Version of the software being packaged. This should be as close as possible to the format of the originalsoftware's version. No white-space is allowed in the version. If it does, QDK will only use the first part ofthe version. It is recommended to only use alphanumeric characters, periods, and dashes. The value mustbe 10 characters or less.
@@ -80,17 +84,51 @@ Relative path to installed application's web interface \(the specified path is r
 
 Port number for the web interface. If empty and QPKG\_WEBUI is defined then the default is to use thesame port number as the web server \(usually port 80\).
 
-The QPKG\_ROOTFS and QPKG\_SERVICE\_PROGRAM\_CHROOT variables are only applicable to TS-x09. IfQPKG\_ROOTFS is defined then QPKG\_SERVICE\_PROGRAM\_CHROOT must also be defined.
+##### QPKG\_WEB\_SSL\_PORT
 
-##### QPKG\_ROOTFS
+SSL Port number for the HTTPS interface. If empty and QPKG\_WEBUI is defined then the default is to use thesame port number as the web server \(usually port 8081\).
 
-Location of the chroot environment. If the value is empty then a default location of\/mnt\/HDA\_ROOT\/rootfs\_2\_3\_6 is used.
+##### QPKG\_USE\_PROXY
+
+Optional. 1 means use QTS HTTP Proxy. When the QPKG has its own HTTP service port, but still want clients to connect to QTS via QTS HTTP port. QTS provides the proxy function for client to connect to the QPKG web UI via QTS HTTP port (default 8080).
+
+##### QPKG\_PROXY\_PATH
+
+Optional. If the attribute/ value is set, the value will be employed as the proxy path. 
+
+##### QPKG\_DESKTOP\_APP
+
+Optional. 1 means to open the QPKG’s Web UI on QTS desktop.
+
+##### QTS\_MINI\_VERSION
+
+QPKG can only run on firmware version Mini or newer.
+
+##### QTS\_MAX\_VERSION
+
+QPKG can only run on firmware version Max or older.
+
+##### QPKG\_VOLUME\_SELECT
+
+Optional.
+0. Disable application routing rule.
+1. Allow outgoing data packet apply to routing rule.
+2. Allow incoming data packet bind to network interface. (not ready)
+3. 1 + 2 (not ready).
+
+##### QPKG\_TIMEOUT
+
+Optional since QTS 4.1.0. Timeout seconds of starting/ stopping the QPKG service. When start the QPKG, it will wait for starting this QPKG according the first timeout seconds (the first integer). When stop or shutdown the system, the second integer is taken as the timeout seconds.
+
+##### QPKG\_VISIBLE
+
+Optional. If the QPKG has web UI, show this QPKG on the Main menu of 1(default): administrators, 2: all NAS users.
 
 ##### QPKG\_SERVICE\_PROGRAM\_CHROOT
 
 Init-script that controls the start and stop of the installed software when running in the chrootenvironment. This script shall support start, stop, and restart commands. Any other command is optional.No default.The following QDK specific variables can also be included in the configuration file to be used when theQPKG package is built. They are described in the QDK Variables chapter.
 
-QDK\_DATA\_DIR\_ICONS, QDK\_DATA\_DIR\_X09, QDK\_DATA\_DIR\_X19, QDK\_DATA\_DIR\_X86,QDK\_DATA\_DIR\_X86\_64, QDK\_DATA\_DIR\_SHARED, QDK\_DATA\_DIR\_CONFIG, QDK\_DATA\_FILE,QDK\_EXTRA\_FILE
+QDK\_DATA\_DIR\_ICONS, QDK\_DATA\_DIR\_X19, QDK\_DATA\_DIR\_X31 ,QDK\_DATA\_DIR\_X41, QDK\_DATA\_DIR\_X86,QDK\_DATA\_DIR\_X86\_64, QDK\_DATA\_DIR\_SHARED, QDK\_DATA\_DIR\_CONFIG, QDK\_DATA\_FILE,QDK\_EXTRA\_FILE
 
 The qbuild application performs a simple sanity check of the QPKG configuration file when the buildprocess is started. If the file is found to be corrupt then the build process exits. Also, qbuild will refuse tobuild a QPKG package unless QPKG\_AUTHOR , QPKG\_NAME , and QPKG\_VER have been assigned values. IfQPKG\_SERVICE\_PROGRAM is undefined then a warning will be issued, but the build will continue. If QPKG\_NAME is found to be more than 20 characters or QPKG\_VER more than 10 characters then the values aretruncated with a warning. Any space in the name or version also results in a warning and truncation \(only thestring up to the first space is used\).
 
