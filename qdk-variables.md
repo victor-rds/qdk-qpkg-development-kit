@@ -137,6 +137,16 @@ If no icons are included then the QPKG is given default icons at installation.
 
 Location of directory with files specific to arm-x19 packages. Default location is a directory named arm-x19 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
 
+##### QDK\_DATA\_DIR\_X31
+
+Location of directory with files specific to arm-x31 packages. Default location is a directory named arm-x31 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
+
+##### QDK\_DATA\_DIR\_X41
+
+Location of directory with files specific to arm-x41 packages. Default location is a directory named arm-x41 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
+
+
+
 ##### QDK\_DATA\_DIR\_X86
 
 Location of files specific to x86 packages. Default location is a directory named x86 in $QDK\_ROOT\_DIR .The value must be a full path or a path relative to $QDK\_ROOT\_DIR .

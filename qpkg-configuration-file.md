@@ -22,7 +22,7 @@ Name of the software being packaged. Usually, the name used for a package would 
 
 ##### QPKG\_DISPLAY\_NAME
 
-
+The QPKG name displayed on QTS Web UI
 
 ##### QPKG\_VER
 
