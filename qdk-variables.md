@@ -24,15 +24,15 @@ Location \\(or expected location\\) of file with package specific functions. Def
 
 ##### QDK\_SCRIPTS\_DIR
 
-Location of directory with the script files that are used by qbuild. Default value is $QDK\\_PATH \\/scripts.
+Location of directory with the script files that are used by qbuild. Default value is $QDK\\_PATH \/scripts.
 
 ##### QDK\_TEMPLATE\_DIR
 
-Location of the directory with the template files that should be used when creating a new buildenvironment using the --create-env option. Currently, generic versions of qpkg.cfg and package\\_routinesshall be located in the specified directory. Any other files and directories are optional. Default value is$QDK\\_PATH \\/template.
+Location of the directory with the template files that should be used when creating a new buildenvironment using the --create-env option. Currently, generic versions of qpkg.cfg and package\\_routinesshall be located in the specified directory. Any other files and directories are optional. Default value is$QDK\\_PATH \/template.
 
 ##### QDK\_INSTALL\_SCRIPT
 
-Location of the generic installation script. That is, the script that is run when the QPKG is installed.Default value is $QDK\\_SCRIPTS\\_DIR \\/qinstall.sh.
+Location of the generic installation script. That is, the script that is run when the QPKG is installed.Default value is $QDK\\_SCRIPTS\\_DIR \/qinstall.sh.
 
 ##### QDK\_VERBOSE
 
@@ -108,7 +108,7 @@ Identity of private key that shall be used for the digital signature.
 
 ##### QDK\_GPG\_PUBKEYRING
 
-Path to public keyring that shall be used to verify a digital signature. Default is \\/etc\\/config\\/qpkg.gpg.
+Path to public keyring that shall be used to verify a digital signature. Default is \/etc\/config\/qpkg.gpg.
 
 ##### QDK\_GPG\_KEYPATH
 
@@ -130,22 +130,23 @@ The icons shall be named ${QPKG\\_NAME} .gif, ${QPKG\\_NAME} \\_80.gif, and ${QP
 
 * ${QPKG\_NAME} \_80.gif is the image displayed in the pop-up dialog \(with information about theQPKG and the buttons to enable, disable, and remove\). It should be a GIF image of 80x80 pixels.
 
-
 If no icons are included then the QPKG is given default icons at installation.
 
-##### QDK\_DATA\_DIR\_X19
+##### QDK\_DATA\_DIR\_ARM\_X19
 
 Location of directory with files specific to arm-x19 packages. Default location is a directory named arm-x19 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
 
-##### QDK\_DATA\_DIR\_X31
+##### QDK\_DATA\_DIR\_ARM\_X31
 
 Location of directory with files specific to arm-x31 packages. Default location is a directory named arm-x31 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
 
-##### QDK\_DATA\_DIR\_X41
+##### QDK\_DATA\_DIR\_ARM\_X41
 
 Location of directory with files specific to arm-x41 packages. Default location is a directory named arm-x41 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
 
+##### QDK\_DATA\_DIR\_ARM\_64
 
+Location of directory with files specific to arm\_64 packages. Default location is a directory named arm-64 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
 
 ##### QDK\_DATA\_DIR\_X86
 
@@ -153,7 +154,11 @@ Location of files specific to x86 packages. Default location is a directory name
 
 ##### QDK\_DATA\_DIR\_X86\_64
 
-Location of directory with files specific to x86 \(64-bit\) packages. Default location is a directory namedx86\_64 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
+Location of directory with files specific to x86 \(64-bit\) packages. Default location is a directory named x86\_64 in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
+
+##### QDK\_DATA\_DIR\_X86\_CE53xx
+
+Location of directory with files specific to x86  packages. Default location is a directory named x86\_ce53xx in $QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .
 
 ##### QDK\_DATA\_DIR\_SHARED
 
@@ -161,7 +166,7 @@ Location of directory with files common to all architectures. These files are in
 
 ##### QDK\_DATA\_DIR\_CONFIG
 
-Location of directory with full path configuration files. Default location is a directory named config in$QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT\_DIR .The complete path under the file system root \(\/\) shall be created in this directory. For example, if aconfiguration file shall be installed in \/etc\/config\/myApp.conf then $QDK\_DATA\_DIR\_CONFIG shouldcontain the subdirectory structure etc\/config\/ in which the myApp.conf file is placed.Note that configuration files that are located relative to the QPKG directory \( $SYS\_QPKG\_DIR \) can beplaced in any of $QDK\_DATA\_DIR\_X19,  $QDK\_DATA\_DIR\_X31, $QDK\_DATA\_DIR\_X41, $QDK\_DATA\_DIR\_X86,$QDK\_DATA\_DIR\_X86\_64, $QDK\_DATA\_DIR\_SHARED, or $QDK\_DATA\_DIR\_CONFIG. It is onlyexternal configuration files that must be placed in $QDK\_DATA\_DIR\_CONFIG.
+Location of directory with full path configuration files. Default location is a directory named config in$QDK\_ROOT\_DIR . The value must be a full path or a path relative to $QDK\_ROOT_DIR .The complete path under the file system root \(\/\) shall be created in this directory. For example, if aconfiguration file shall be installed in \/etc\/config\/myApp.conf then $QDKDATADIRCONFIG shouldcontain the subdirectory structure etc\/config\/ in which the myApp.conf file is placed.Note that configuration files that are located relative to the QPKG directory \( $SYSQPKGDIR \) can beplaced in any of $QDD\_DATA\_DIR\_ARM\_X19, $QDK\_DATA\_DIR\_ARM\_X31, $QDK\_DATA\_DIR\_ARM\_X41, $QDK\_DATA\_DIR\_ARM\_64, $QDK\_DATA\_DIR\_X86,$QDK\_DATA\_DIR\_X86\_64_, $QDK\_DATA\_DIR\_SHARED, or $QDK\_DATA\_DIR\_CONFIG. It is onlyexternal configuration files that must be placed in $QDK\_DATA\_DIR\_CONFIG.
 
 ##### QDK\_DATA\_FILE
 
