@@ -60,5 +60,3 @@ Example of header script.
 
 `exit 1`
 
-
-

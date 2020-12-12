@@ -8,29 +8,29 @@ We create a new build environment and extracts the contents of the existing QPKG
 
 directory.
 
-`    # qbuild --create-env Optware`
+`# qbuild --create-env Optware`
 
-`    # qbuild --extract Optware_0.99.163_arm-x19.qpkg Optware/shared`
+`# qbuild --extract Optware_0.99.163_arm-x19.qpkg Optware/shared`
 
-`    qinstall.sh`
+`qinstall.sh`
 
-`    Optware.tgz`
+`Optware.tgz`
 
-`    qpkg.cfg`
+`qpkg.cfg`
 
-`    # cd Optware/shared`
+`# cd Optware/shared`
 
-`    # tar xvf Optware.tgz`
+`# tar xvf Optware.tgz`
 
-`   ./`
+`./`
 
-`    ./Optware.sh`
+`./Optware.sh`
 
-`    ./.qpkg_icon_80.gif`
+`./.qpkg_icon_80.gif`
 
-`    ./.qpkg_icon.gif`
+`./.qpkg_icon.gif`
 
-`    ./.qpkg_icon_gray.gif`
+`./.qpkg_icon_gray.gif`
 
 The directory structure should now look like this
 
@@ -44,19 +44,19 @@ The directory structure should now look like this
 
 `shared/`
 
-`          .qpkg_icon_80.gif`
+`.qpkg_icon_80.gif`
 
-`          .qpkg_icon.gif`
+`.qpkg_icon.gif`
 
-`          .qpkg_icon_gray.gif`
+`.qpkg_icon_gray.gif`
 
-`          Optware.sh`
+`Optware.sh`
 
-`          Optware.tgz`
+`Optware.tgz`
 
-`          qinstall.sh`
+`qinstall.sh`
 
-`          qpkg.cfg`
+`qpkg.cfg`
 
 `x86/`
 
@@ -114,11 +114,11 @@ with a solution that checks for the location in \/etc\/config\/qpkg.conf.
 
 `{`
 
-`        /bin/echo -e "Error: $*"`
+`/bin/echo -e "Error: $*"`
 
-`        /bin/echo`
+`/bin/echo`
 
-`        exit 1`
+`exit 1`
 
 `}`
 
@@ -130,7 +130,7 @@ with a solution that checks for the location in \/etc\/config\/qpkg.conf.
 
 `if [ "$ENABLED" != "TRUE" ]; then`
 
-`         _exit "$QPKG_NAME is disabled."`
+`_exit "$QPKG_NAME is disabled."`
 
 `fi`
 
@@ -138,21 +138,21 @@ with a solution that checks for the location in \/etc\/config\/qpkg.conf.
 
 `if [ -d "$OPTWARE_DIR" ]; then`
 
-`         /bin/echo "Enable Optware/ipkg"`
+`/bin/echo "Enable Optware/ipkg"`
 
-`         /bin/rm -f /opt`
+`/bin/rm -f /opt`
 
-`         /bin/ln -s $OPTWARE_DIR /opt`
+`/bin/ln -s $OPTWARE_DIR /opt`
 
 `# adding Ipkg apps into system path ...`
 
-`       /bin/grep "PATH=.*/opt/bin.*" /etc/profile >/dev/null 1>&2 || /bin/echo ➥`
+`/bin/grep "PATH=.*/opt/bin.*" /etc/profile >/dev/null 1>&2 || /bin/echo ➥`
 
-`       "export PATH=\$PATH":/opt/bin:/opt/sbin >> /etc/profile`
+`"export PATH=\$PATH":/opt/bin:/opt/sbin >> /etc/profile`
 
 `else`
 
-`        _exit "$OPTWARE_DIR: no such directory"`
+`_exit "$OPTWARE_DIR: no such directory"`
 
 `fi`
 
@@ -160,29 +160,29 @@ with a solution that checks for the location in \/etc\/config\/qpkg.conf.
 
 `stop)`
 
-`         /bin/echo "Disable Optware/ipkg"`
+`/bin/echo "Disable Optware/ipkg"`
 
-`         exportPATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin`
+`exportPATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin`
 
-`         /bin/sync`
+`/bin/sync`
 
-`         /bin/sleep 1`
+`/bin/sleep 1`
 
 `;;`
 
 `restart)`
 
-`        $0 stop`
+`$0 stop`
 
-`        $0 start`
+`$0 start`
 
 `;;`
 
 `*)`
 
-`        echo "Usage: $0 {start|stop|restart}"`
+`echo "Usage: $0 {start|stop|restart}"`
 
-`        exit 1`
+`exit 1`
 
 `esac`
 

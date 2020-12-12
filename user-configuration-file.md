@@ -6,7 +6,7 @@ By default, the DEFAULT section is included and then any sections specified on t
 
 For example, if QDK\_PRE\_BUILD =pre\_build.sh is added to the DEFAULT section in ~\/.qdkrc, then we couldadd a script named pre\_build.sh to any project and when qbuild is run it will automatically run this script aspart of the pre-build actions. If the location of a specific project, in this example Python, is specified then itwould be possible to run 'qbuild -s python' anywhere and qbuild would still build the project at the correct location.
 
-\[DEFAULT\] 
+\[DEFAULT\]
 
 QDK\_PRE\_BUILD=pre\_build.sh
 

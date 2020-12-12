@@ -8,7 +8,7 @@ Also, when the script is run qbuild has not checked that the configuration file 
 
 If a QPKG configuration file has been created by the setup script or it has been verified that there is a validQPKG configuration file at the location specified in **$QDK\_QPKG\_CONFIG** then the values in theconfiguration file can be modified by the setup script using one of qbuild's support functions,
 
-##### edit\_qpkg\_config FIELD VALUE \[location of QPKG configuration file\]
+## edit\_qpkg\_config FIELD VALUE \[location of QPKG configuration file\]
 
 If the location of the file isn't specified then the default location specified in $QDK\_QPKG\_CONFIG is used.
 
@@ -32,7 +32,7 @@ After the post-build is finished the build continues for the next architecture o
 
 The teardown script, specified with the --teardown option or by using the QDK\_TEARDOWN definition, hasaccess to the same variables as all the previous scripts, although many of them would be of limited useconsidering that this script performs the last few actions before the build process exits.
 
-All the scripts can use the following support functions for error messages, warning messages, normalmessages, verbose messages, and debug 
+All the scripts can use the following support functions for error messages, warning messages, normalmessages, verbose messages, and debug
 
 messageserr\_msg MSG
 

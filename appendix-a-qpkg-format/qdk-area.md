@@ -12,5 +12,5 @@ byte order to make it platform-independent. Last in the QDK area is a one byte t
 
 indicate the end of the area. Currently, the only supported data type is 0x1 \(digital signatures\).
 
-![](/assets/2016-09-08_172051.png)
+![](../.gitbook/assets/2016-09-08_172051.png)
 
